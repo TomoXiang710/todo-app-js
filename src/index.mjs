@@ -21,7 +21,20 @@ const OnClickAdd = () => {
     const completeButton = document.createElement("button");
     completeButton.innerText = "完了";
     completeButton.addEventListener("click", () => {
-        alert("完了");
+        // 押された完了ボタンの親にあるliタグを未完了リストから削除
+        const moveTarget = completeButton.closest("li");
+
+        // 完了ボタンと削除ボタンを消す
+        completeButton.nextElementSibling.remove();
+        completeButton.remove();
+        
+        // 戻すボタンを生成
+        const backButton = document.createElement("button");
+        backButton.innerText = "戻す";
+        moveTarget.firstElementChild.appendChild(backButton);
+
+        // 完了リストに移動
+        document.getElementById("complete-list").appendChild(moveTarget);
     });
 
     // button（削除）タグを生成
