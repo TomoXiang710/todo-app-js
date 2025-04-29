@@ -1,0 +1,9 @@
+# Parcelの作業用フォルダ
+.cache
+dist
+
+# Node.js関連
+node_modules
+
+# その他、エディタごとのゴミファイル（おまけ）
+.DS_Store
