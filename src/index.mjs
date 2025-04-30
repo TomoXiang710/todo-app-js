@@ -1,4 +1,4 @@
-import "./style.css";
+// import "./style.css";
 
 const OnClickAdd = () => {
     // テキストボックスの値を取得し、初期化する
